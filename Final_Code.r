@@ -1,18 +1,9 @@
 rm(list=ls())
-
-
-library(tidyverse)
-library(rpart)
-library(rpart.plot)
-library(caTools)
-library(caret)
-library(DT)
-library(export)
-library(data.table)
-library(h2o)
-library(randomForest)
-library(caret)
-
+# https://www.kaggle.com/datasets/jboysen/ny-home-mortgage
+list.of.packages <- c("ggplot2","tidyverse","rpart", "caTools","data.table"
+                      "rpart.plot","Rcpp","caret","randomForest","DT","h2o","export")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
 
 fillColor = "#FFA07A"
 fillColor2 = "#F1C40F"
